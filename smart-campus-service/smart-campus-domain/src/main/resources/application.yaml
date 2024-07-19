@@ -1,0 +1,35 @@
+# 服务端配置
+server:
+  port: 9999
+
+# spring 配置
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: demo
+  # 数据库配置
+  r2dbc:
+    url: r2dbc:mysql://1.12.242.126:13306/smart_campus
+    username: root
+    password: Mysql@199668
+
+  # redis
+  data:
+    redis:
+      database: 0
+      host: localhost
+      port: 16379
+      password: Redis@199668
+      timeout: 5000
+
+  # json
+  jackson:
+    default-property-inclusion: non_null
+
+# 日志
+logging:
+  level:
+    org.springframework.r2dbc.core: DEBUG
+
+
